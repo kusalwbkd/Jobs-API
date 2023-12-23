@@ -49,6 +49,11 @@ app.use('/api/v1/jobs',authenticatedUser,jobsRouter)
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
+
+app.get('/', (req, res) => {
+  res.send('<h1>Jobs API</h1>');
+});
+
 const port = process.env.PORT || 3000;
 
 const start = async () => {
