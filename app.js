@@ -40,7 +40,7 @@ app.use(rateLimiter({
 	// store: ... , // Use an external store for consistency across multiple server instances.
 }))
 app.use(helmet())
-app/use(cors())
+app.use(cors())
 app.use(xss())
 
 // routes
